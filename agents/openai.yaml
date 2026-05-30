@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resume Skill"
+  short_description: "Rewrite and build HR ready HTML resumes"
+  default_prompt: "Use $resume-skill to rewrite my resume into a concise HR and GEO friendly HTML resume."
