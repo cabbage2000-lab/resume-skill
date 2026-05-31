@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="候选人 01，数据科学专业 2026 届本科生，目标数据分析师，具备 SQL、Python、BI 看板和业务分析项目经验。">
+  <meta name="keywords" content="数据分析,SQL,Python,BI,dashboard,漏斗分析,同期群分析">
+  <title>候选人 01 - 数据分析师简历</title>
+
+  <style>
+    :root {
+      --ink: #221d18;          /* 暖近黑：正文主色 */
+      --ink-2: #443c33;
+      --muted: #756a5c;        /* 暖灰：次要/元信息 */
+      --faint: #9d9182;
+      --line: #e7ded0;
+      --line-2: #d2c7b4;
+      --soft: #f3ebdd;         /* 暖底纹 */
+      --accent: #9a3b1f;       /* 深赭石 / 焦褐：强调与量化结果 */
+      --accent-2: #b8552f;
+      --accent-soft: #f1e2d6;
+      --paper: #fbf8f2;
+      --paper-edge: #f1ebe0;
+
+      /* 纯系统字体栈：内网/离线打开也保证排版稳定 */
+      --serif: Georgia, "Songti SC", "STSong", "Source Han Serif SC", "Noto Serif CJK SC", "Times New Roman", serif;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans SC", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      background:
+        radial-gradient(120% 80% at 50% -10%, #f4f0ea 0%, #e9e3d8 55%, #e2dbce 100%);
+      background-attachment: fixed;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 14.5px;
+      line-height: 1.62;
+      letter-spacing: 0;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+
+    /* ---------- 纸张 ---------- */
+    .page {
+      position: relative;
+      width: min(100%, 210mm);
+      min-height: 297mm;
+      margin: 30px auto 48px;
+      padding: 19mm 18mm 15mm;
+      background: var(--paper);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.7) inset,
+        0 18px 50px -18px rgba(64, 48, 32, 0.30),
+        0 2px 8px rgba(64, 48, 32, 0.08);
+      border: 1px solid var(--paper-edge);
+    }
+    /* 左侧装订线：极细的编辑式参考线 */
+    .page::before {
+      content: "";
+      position: absolute;
+      left: 12mm; top: 14mm; bottom: 12mm;
+      width: 1px;
+      background: linear-gradient(var(--line), transparent);
+      opacity: .5;
+      pointer-events: none;
+    }
+
+    /* ---------- 报头 ---------- */
+    .masthead {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 26px;
+      align-items: end;
+      padding-bottom: 16px;
+      border-bottom: 2.5px solid var(--ink);
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 8px;
+      font-family: var(--serif);
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: .26em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .kicker::before {
+      content: "";
+      width: 22px; height: 2px;
+      background: var(--accent);
+    }
+
+    .name {
+      margin: 0;
+      font-size: 38px;
+      line-height: 1.02;
+      font-weight: 900;
+      letter-spacing: .04em;
+      color: var(--ink);
+    }
+
+    .target {
+      margin: 12px 0 0;
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--accent);
+      letter-spacing: .01em;
+    }
+    .target b { font-style: normal; font-weight: 700; }
+
+    .lede {
+      margin: 9px 0 0;
+      max-width: 56ch;
+      color: var(--ink-2);
+      font-size: 13.6px;
+      line-height: 1.66;
+    }
+
+    /* 联系方式：标签 + 值，右栏对齐 */
+    .contacts {
+      display: grid;
+      gap: 7px;
+      min-width: 196px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .contacts li {
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: end;
+      align-items: baseline;
+      gap: 10px;
+      text-align: right;
+    }
+    .c-label {
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--faint);
+    }
+    .c-value {
+      font-size: 12.8px;
+      color: var(--ink);
+      font-feature-settings: "tnum" 1;
+    }
+
+    /* ---------- 区块 ---------- */
+    .section { margin-top: 20px; }
+
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      gap: 11px;
+      margin: 0 0 11px;
+    }
+    .section-index {
+      font-family: var(--serif);
+      font-size: 15px;
+      font-style: italic;
+      font-weight: 600;
+      color: var(--accent);
+      font-feature-settings: "tnum" 1;
+    }
+    .section-title {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: .04em;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+    .section-head::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--line-2);
+      transform: translateY(-2px);
+    }
+
+    /* ---------- 列表 / 要点 ---------- */
+    .bullets {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .bullets li {
+      position: relative;
+      margin: 5px 0;
+      padding-left: 16px;
+      color: var(--ink-2);
+    }
+    .bullets li::before {
+      content: "";
+      position: absolute;
+      left: 1px; top: .68em;
+      width: 5px; height: 5px;
+      border-radius: 1px;
+      background: var(--accent);
+      transform: rotate(45deg);
+    }
+
+    /* 量化结果高亮：扫读时直接跳出 */
+    .m {
+      color: var(--accent);
+      font-weight: 700;
+      font-feature-settings: "tnum" 1;
+      letter-spacing: .01em;
+    }
+
+    /* ---------- 时间轴条目 ---------- */
+    .stream {
+      display: grid;
+      gap: 13px;
+      margin-left: 2px;
+    }
+    .item {
+      position: relative;
+      padding-left: 20px;
+      break-inside: avoid;
+    }
+    .item::before {            /* 节点 */
+      content: "";
+      position: absolute;
+      left: 0; top: 6px;
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: var(--paper);
+      border: 2px solid var(--accent);
+      z-index: 1;
+    }
+    .item::after {             /* 连接线 */
+      content: "";
+      position: absolute;
+      left: 4px; top: 17px; bottom: -15px;
+      width: 1.5px;
+      background: var(--line-2);
+    }
+    .item:last-child::after { display: none; }
+
+    .item-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+    .item-title {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--ink);
+      letter-spacing: .01em;
+    }
+    .item-title span {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 13.5px;
+    }
+    .item-date {
+      font-family: var(--serif);
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--muted);
+      white-space: nowrap;
+      letter-spacing: .02em;
+      font-feature-settings: "tnum" 1;
+    }
+    .item-sub {
+      margin: 0 0 4px;
+      color: var(--muted);
+      font-size: 12.6px;
+    }
+    .item-sub b { color: var(--ink-2); font-weight: 700; }
+
+    /* ---------- 标签 chips ---------- */
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 7px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .chips li {
+      border: 1px solid var(--line-2);
+      border-radius: 999px;
+      padding: 2px 10px;
+      background: var(--soft);
+      color: var(--accent);
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: .02em;
+    }
+
+    /* ---------- 技能 ---------- */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 11px 26px;
+      margin: 0;
+    }
+    .skill {
+      display: grid;
+      grid-template-columns: 78px minmax(0, 1fr);
+      gap: 10px;
+      align-items: baseline;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+    }
+    .skill dt {
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      color: var(--ink);
+    }
+    .skill dd {
+      margin: 0;
+      color: var(--ink-2);
+      font-size: 13px;
+    }
+
+    /* ---------- 荣誉 ---------- */
+    .awards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 6px 26px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .awards li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--ink-2);
+      font-size: 13.4px;
+    }
+    .awards li::before {
+      content: "";
+      position: absolute;
+      left: 2px; top: .62em;
+      width: 7px; height: 7px;
+      border: 1.5px solid var(--accent);
+      border-radius: 50%;
+    }
+
+    /* ---------- 提示框 ---------- */
+    .callout {
+      margin: 4px 0 0;
+      padding: 11px 14px;
+      border-left: 3px solid var(--accent);
+      background: var(--soft);
+      color: var(--muted);
+      font-size: 12.6px;
+      border-radius: 0 4px 4px 0;
+    }
+    .callout b { color: var(--ink-2); font-weight: 700; }
+
+    /* ---------- 入场动效（仅屏幕、尊重无障碍偏好） ---------- */
+    @media screen and (prefers-reduced-motion: no-preference) {
+      .masthead, .section {
+        animation: rise .6s cubic-bezier(.2, .7, .2, 1) backwards;
+      }
+      .masthead { animation-delay: .02s; }
+      .section:nth-of-type(1) { animation-delay: .08s; }
+      .section:nth-of-type(2) { animation-delay: .14s; }
+      .section:nth-of-type(3) { animation-delay: .20s; }
+      .section:nth-of-type(4) { animation-delay: .26s; }
+      .section:nth-of-type(5) { animation-delay: .32s; }
+      .section:nth-of-type(6) { animation-delay: .38s; }
+      .section:nth-of-type(7) { animation-delay: .44s; }
+      .section:nth-of-type(8) { animation-delay: .50s; }
+      @keyframes rise {
+        from { opacity: 0; transform: translateY(9px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+    }
+
+    /* ---------- 响应式 ---------- */
+    @media (max-width: 720px) {
+      .page {
+        margin: 0;
+        padding: 24px 18px 28px;
+        min-height: auto;
+        box-shadow: none;
+        border: none;
+      }
+      .page::before { display: none; }
+      .masthead,
+      .item-head {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+      .contacts { min-width: 0; }
+      .contacts li { justify-content: start; text-align: left; }
+      .name { font-size: 32px; }
+      .skills, .awards { grid-template-columns: 1fr; }
+      .item-date { white-space: normal; }
+    }
+
+    /* ---------- 打印：A4、省墨、保留强调 ---------- */
+    @page { size: A4; margin: 12mm; }
+
+    @media print {
+      html { background: #ffffff; }
+      /* 两页版：有空间，无需压字号，保留舒适的阅读节奏 */
+      body { font-size: 12px; line-height: 1.5; }
+      .page {
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        border: none;
+        background: #ffffff;
+      }
+      .page::before { display: none; }
+
+      .masthead { padding-bottom: 12px; }
+      .name { font-size: 32px; }
+      .lede { font-size: 11.5px; line-height: 1.6; }
+
+      .section { margin-top: 14px; }
+      .section-head { margin-bottom: 9px; }
+
+      .stream { gap: 12px; }
+      .bullets li { margin: 4px 0; }
+
+      .skill { padding-bottom: 6px; }
+      .callout { padding: 10px 13px; }
+
+      /* 分页控制：条目不被截断、标题不孤悬页底、段落不留寡行 */
+      .section-head { break-after: avoid; page-break-after: avoid; }
+      .item,
+      .skill,
+      .awards li,
+      .callout { break-inside: avoid; page-break-inside: avoid; }
+      .bullets li { break-inside: avoid; }
+      p, li { orphans: 2; widows: 2; }
+
+      /* 省墨：去除底纹，但量化结果与节点仍用深色保证扫读 */
+      .chips li, .callout { background: #ffffff; }
+      a { color: var(--ink); }
+    }
+  </style>
+</head>
+<body>
+  <main class="page" aria-label="候选人 01数据分析师简历">
+    <header class="masthead">
+      <div>
+        <p class="kicker">2026 届 · 求职简历</p>
+        <h1 class="name">候选人 01</h1>
+        <p class="target">求职意向 <b>数据分析师 / 商业分析助理</b></p>
+        <p class="lede">2026 届数据科学本科生，围绕 SQL、Python、BI 看板和业务指标拆解完成 <b class="m">3</b> 段数据项目；能把清洗、口径校验和结论表达串成可复用分析流程。</p>
+      </div>
+      <ul class="contacts" aria-label="联系方式">
+        <li><span class="c-label">手机</span><span class="c-value">000-0000-0001</span></li>
+        <li><span class="c-label">邮箱</span><span class="c-value">candidate01@redacted.example</span></li>
+        <li><span class="c-label">城市</span><span class="c-value">目标城市</span></li>
+        <li><span class="c-label">作品集</span><span class="c-value">portfolio-01.redacted.example</span></li>
+        <li><span class="c-label">到岗</span><span class="c-value">2026.07 可入职</span></li>
+      </ul>
+    </header>
+
+    <section class="section" aria-labelledby="summary">
+      <div class="section-head">
+        <span class="section-index">01</span>
+        <h2 class="section-title" id="summary">个人优势</h2>
+      </div>
+      <ul class="bullets">
+        <li>使用 SQL 与 Python 清洗 <b class="m">30 万+</b> 行订单和行为数据，建立字段口径表，减少重复核对时间。</li>
+        <li>按渠道、客群和转化阶段拆解漏斗，输出 <b class="m">15</b> 张可复用图表并支撑运营排期评估。</li>
+        <li>能把模型结果翻译为业务语言，报告结构覆盖问题、数据来源、方法、结论和下一步动作。</li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="education">
+      <div class="section-head">
+        <span class="section-index">02</span>
+        <h2 class="section-title" id="education">教育背景</h2>
+      </div>
+      <div class="stream">
+        <article class="item">
+          <div class="item-head">
+            <h3 class="item-title">示例财经大学 <span>数据科学与大数据技术 · 本科</span></h3>
+            <div class="item-date">2022.09 – 2026.06</div>
+          </div>
+          <p class="item-sub">GPA <b>3.72 / 4.00</b> ｜ 专业排名 <b>前 12%</b> ｜ 主修：统计建模、数据库系统、Python 数据分析、机器学习基础、商业智能</p>
+          <ul class="chips" aria-label="教育关键词">
+            <li>校级一等奖学金</li>
+            <li>数学建模省赛二等奖</li>
+            <li>CET-6</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="experience">
+      <div class="section-head">
+        <span class="section-index">03</span>
+        <h2 class="section-title" id="experience">实习经历</h2>
+      </div>
+      <div class="stream">
+        <article class="item">
+          <div class="item-head">
+            <h3 class="item-title">示例零售科技公司 <span>数据分析实习生</span></h3>
+            <div class="item-date">2025.07 – 2025.10 ｜ 目标城市</div>
+          </div>
+          <ul class="bullets">
+        <li>清洗会员订单、优惠券和访问日志 <b class="m">28 万+</b> 行，建立异常值检查规则，周报返工次数从 <b class="m">5 次</b> 降至 <b class="m">1 次</b>。</li>
+        <li>搭建日活、复购、券核销看板，覆盖 <b class="m">6</b> 个运营小组，使活动复盘从手工拼表转为当天更新。</li>
+        <li>按新老客、渠道和品类拆解转化漏斗，定位高流失节点，提出 <b class="m">3</b> 条落地建议并进入下期 A/B 方案。</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="projects">
+      <div class="section-head">
+        <span class="section-index">04</span>
+        <h2 class="section-title" id="projects">项目经历</h2>
+      </div>
+      <div class="stream">
+        <article class="item">
+          <div class="item-head">
+            <h3 class="item-title">校园外卖消费行为分析 <span>分析负责人</span></h3>
+            <div class="item-date">2025.03 – 2025.06</div>
+          </div>
+          <p class="item-sub">目标：识别学生午晚餐消费频次和补贴敏感因素。</p>
+          <ul class="bullets">
+        <li>回收 <b class="m">742</b> 份有效问卷，合并商户品类、价格带和配送时段字段，建立用户分层标签。</li>
+        <li>用逻辑回归评估补贴、距离和评分影响，发现高频用户对配送时长更敏感，形成 <b class="m">18 页</b> 分析报告。</li>
+        <li>在 Tableau 中搭建交互看板，按校区、时段和品类筛选，支持团队完成课堂答辩和二次复盘。</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <div class="item-head">
+            <h3 class="item-title">电商评论主题识别练习 <span>Python 开发成员</span></h3>
+            <div class="item-date">2024.10 – 2024.12</div>
+          </div>
+          <ul class="bullets">
+        <li>抓取并脱敏 <b class="m">12,000+</b> 条公开评论，完成分词、停用词处理和 TF-IDF 特征构建。</li>
+        <li>用 K-means 聚类识别物流、质量、价格、售后 <b class="m">4</b> 类主题，整理高频词和样本句供运营改写页面卖点。</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="campus">
+      <div class="section-head">
+        <span class="section-index">05</span>
+        <h2 class="section-title" id="campus">校园经历</h2>
+      </div>
+      <div class="stream">
+        <article class="item">
+          <div class="item-head">
+            <h3 class="item-title">示例数据社群 <span>训练营组织者</span></h3>
+            <div class="item-date">2024.09 – 2025.06</div>
+          </div>
+          <ul class="bullets">
+        <li>设计 <b class="m">8</b> 次 SQL 练习题和讲义，组织 <b class="m">60+</b> 名同学完成打卡，结营率达到 <b class="m">78%</b>。</li>
+        <li>沉淀数据字典、查询模板和错题说明，供下一届社群复用。</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="skills">
+      <div class="section-head">
+        <span class="section-index">06</span>
+        <h2 class="section-title" id="skills">技能与工具</h2>
+      </div>
+      <dl class="skills">
+        <div class="skill">
+          <dt>数据工具</dt>
+          <dd>SQL、Python pandas、Excel、Tableau、Power BI</dd>
+        </div>
+        <div class="skill">
+          <dt>分析方法</dt>
+          <dd>漏斗分析、同期群、A/B 复盘、描述统计、回归基础</dd>
+        </div>
+        <div class="skill">
+          <dt>工程基础</dt>
+          <dd>MySQL、Git、Jupyter Notebook、数据字典维护</dd>
+        </div>
+        <div class="skill">
+          <dt>语言能力</dt>
+          <dd>CET-6 556 分，能阅读英文技术文档</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="section" aria-labelledby="awards">
+      <div class="section-head">
+        <span class="section-index">07</span>
+        <h2 class="section-title" id="awards">荣誉证书</h2>
+      </div>
+      <ul class="awards">
+        <li>2025 年省级大学生统计调查大赛二等奖</li>
+        <li>2024 年校级一等奖学金</li>
+        <li>Tableau Desktop Specialist 备考中</li>
+        <li>全国大学生数学建模竞赛省级二等奖</li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="extra">
+      <div class="section-head">
+        <span class="section-index">08</span>
+        <h2 class="section-title" id="extra">补充信息</h2>
+      </div>
+      <p class="callout">求职关键词覆盖：<b class="m">SQL</b>、<b class="m">Python</b>、dashboard、funnel analysis、cohort analysis、指标体系。</p>
+    </section>
+  </main>
+
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "候选人 01",
+    "email": "candidate01@redacted.example",
+    "telephone": "000-0000-0001",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "目标城市",
+        "addressCountry": "CN"
+    },
+    "jobTitle": "数据分析师",
+    "alumniOf": "示例财经大学",
+    "url": "portfolio-01.redacted.example",
+    "knowsAbout": [
+        "数据分析",
+        "SQL",
+        "Python",
+        "BI 看板",
+        "漏斗分析",
+        "同期群分析"
+    ]
+}
+  </script>
+</body>
+</html>

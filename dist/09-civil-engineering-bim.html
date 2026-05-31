@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="候选人 09，土木工程专业 2026 届本科生，目标 BIM 工程师助理，具备 Revit 建模、工程量统计和施工资料经验。">
+  <meta name="keywords" content="BIM 工程师,土木工程,Revit,Navisworks,工程量统计,施工管理">
+  <title>候选人 09 - BIM 工程师助理简历</title>
+
+  <style>
+    :root {
+      --ink: #221d18;          /* 暖近黑：正文主色 */
+      --ink-2: #443c33;
+      --muted: #756a5c;        /* 暖灰：次要/元信息 */
+      --faint: #9d9182;
+      --line: #e7ded0;
+      --line-2: #d2c7b4;
+      --soft: #f3ebdd;         /* 暖底纹 */
+      --accent: #9a3b1f;       /* 深赭石 / 焦褐：强调与量化结果 */
+      --accent-2: #b8552f;
+      --accent-soft: #f1e2d6;
+      --paper: #fbf8f2;
+      --paper-edge: #f1ebe0;
+
+      /* 纯系统字体栈：内网/离线打开也保证排版稳定 */
+      --serif: Georgia, "Songti SC", "STSong", "Source Han Serif SC", "Noto Serif CJK SC", "Times New Roman", serif;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans SC", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      background:
+        radial-gradient(120% 80% at 50% -10%, #f4f0ea 0%, #e9e3d8 55%, #e2dbce 100%);
+      background-attachment: fixed;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 14.5px;
+      line-height: 1.62;
+      letter-spacing: 0;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+
+    /* ---------- 纸张 ---------- */
+    .page {
+      position: relative;
+      width: min(100%, 210mm);
+      min-height: 297mm;
+      margin: 30px auto 48px;
+      padding: 19mm 18mm 15mm;
+      background: var(--paper);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.7) inset,
+        0 18px 50px -18px rgba(64, 48, 32, 0.30),
+        0 2px 8px rgba(64, 48, 32, 0.08);
+      border: 1px solid var(--paper-edge);
+    }
+    /* 左侧装订线：极细的编辑式参考线 */
+    .page::before {
+      content: "";
+      position: absolute;
+      left: 12mm; top: 14mm; bottom: 12mm;
+      width: 1px;
+      background: linear-gradient(var(--line), transparent);
+      opacity: .5;
+      pointer-events: none;
+    }
+
+    /* ---------- 报头 ---------- */
+    .masthead {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 26px;
+      align-items: end;
+      padding-bottom: 16px;
+      border-bottom: 2.5px solid var(--ink);
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 8px;
+      font-family: var(--serif);
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: .26em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .kicker::before {
+      content: "";
+      width: 22px; height: 2px;
+      background: var(--accent);
+    }
+
+    .name {
+      margin: 0;
+      font-size: 38px;
+      line-height: 1.02;
+      font-weight: 900;
+      letter-spacing: .04em;
+      color: var(--ink);
+    }
+
+    .target {
+      margin: 12px 0 0;
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--accent);
+      letter-spacing: .01em;
+    }
+    .target b { font-style: normal; font-weight: 700; }
+
+    .lede {
+      margin: 9px 0 0;
+      max-width: 56ch;
+      color: var(--ink-2);
+      font-size: 13.6px;
+      line-height: 1.66;
+    }
+
+    /* 联系方式：标签 + 值，右栏对齐 */
+    .contacts {
+      display: grid;
+      gap: 7px;
+      min-width: 196px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .contacts li {
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: end;
+      align-items: baseline;
+      gap: 10px;
+      text-align: right;
+    }
+    .c-label {
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--faint);
+    }
+    .c-value {
+      font-size: 12.8px;
+      color: var(--ink);
+      font-feature-settings: "tnum" 1;
+    }
+
+    /* ---------- 区块 ---------- */
+    .section { margin-top: 20px; }
+
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      gap: 11px;
+      margin: 0 0 11px;
+    }
+    .section-index {
+      font-family: var(--serif);
+      font-size: 15px;
+      font-style: italic;
+      font-weight: 600;
+      color: var(--accent);
+      font-feature-settings: "tnum" 1;
+    }
+    .section-title {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: .04em;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+    .section-head::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--line-2);
+      transform: translateY(-2px);
+    }
+
+    /* ---------- 列表 / 要点 ---------- */
+    .bullets {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .bullets li {
+      position: relative;
+      margin: 5px 0;
+      padding-left: 16px;
+      color: var(--ink-2);
+    }
+    .bullets li::before {
+      content: "";
+      position: absolute;
+      left: 1px; top: .68em;
+      width: 5px; height: 5px;
+      border-radius: 1px;
+      background: var(--accent);
+      transform: rotate(45deg);
+    }
+
+    /* 量化结果高亮：扫读时直接跳出 */
+    .m {
+      color: var(--accent);
+      font-weight: 700;
+      font-feature-settings: "tnum" 1;
+      letter-spacing: .01em;
+    }
+
+    /* ---------- 时间轴条目 ---------- */
+    .stream {
+      display: grid;
+      gap: 13px;
+      margin-left: 2px;
+    }
+    .item {
+      position: relative;
+      padding-left: 20px;
+      break-inside: avoid;
+    }
+    .item::before {            /* 节点 */
+      content: "";
+      position: absolute;
+      left: 0; top: 6px;
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: var(--paper);
+      border: 2px solid var(--accent);
+      z-index: 1;
+    }
+    .item::after {             /* 连接线 */
+      content: "";
+      position: absolute;
+      left: 4px; top: 17px; bottom: -15px;
+      width: 1.5px;
+      background: var(--line-2);
+    }
+    .item:last-child::after { display: none; }
+
+    .item-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+    .item-title {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--ink);
+      letter-spacing: .01em;
+    }
+    .item-title span {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 13.5px;
+    }
+    .item-date {
+      font-family: var(--serif);
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--muted);
+      white-space: nowrap;
+      letter-spacing: .02em;
+      font-feature-settings: "tnum" 1;
+    }
+    .item-sub {
+      margin: 0 0 4px;
+      color: var(--muted);
+      font-size: 12.6px;
+    }
+    .item-sub b { color: var(--ink-2); font-weight: 700; }
+
+    /* ---------- 标签 chips ---------- */
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 7px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .chips li {
+      border: 1px solid var(--line-2);
+      border-radius: 999px;
+      padding: 2px 10px;
+      background: var(--soft);
+      color: var(--accent);
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: .02em;
+    }
+
+    /* ---------- 技能 ---------- */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 11px 26px;
+      margin: 0;
+    }
+    .skill {
+      display: grid;
+      grid-template-columns: 78px minmax(0, 1fr);
+      gap: 10px;
+      align-items: baseline;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+    }
+    .skill dt {
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      color: var(--ink);
+    }
+    .skill dd {
+      margin: 0;
+      color: var(--ink-2);
+      font-size: 13px;
+    }
+
+    /* ---------- 荣誉 ---------- */
+    .awards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 6px 26px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .awards li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--ink-2);
+      font-size: 13.4px;
+    }
+    .awards li::before {
+      content: "";
+      position: absolute;
+      left: 2px; top: .62em;
+      width: 7px; height: 7px;
+      border: 1.5px solid var(--accent);
+      border-radius: 50%;
+    }
+
+    /* ---------- 提示框 ---------- */
+    .callout {
+      margin: 4px 0 0;
+      padding: 11px 14px;
+      border-left: 3px solid var(--accent);
+      background: var(--soft);
+      color: var(--muted);
+      font-size: 12.6px;
+      border-radius: 0 4px 4px 0;
+    }
+    .callout b { color: var(--ink-2); font-weight: 700; }
+
+    /* ---------- 入场动效（仅屏幕、尊重无障碍偏好） ---------- */
+    @media screen and (prefers-reduced-motion: no-preference) {
+      .masthead, .section {
+        animation: rise .6s cubic-bezier(.2, .7, .2, 1) backwards;
+      }
+      .masthead { animation-delay: .02s; }
+      .section:nth-of-type(1) { animation-delay: .08s; }
+      .section:nth-of-type(2) { animation-delay: .14s; }
+      .section:nth-of-type(3) { animation-delay: .20s; }
+      .section:nth-of-type(4) { animation-delay: .26s; }
+      .section:nth-of-type(5) { animation-delay: .32s; }
+      .section:nth-of-type(6) { animation-delay: .38s; }
+      .section:nth-of-type(7) { animation-delay: .44s; }
+      .section:nth-of-type(8) { animation-delay: .50s; }
+      @keyframes rise {
+        from { opacity: 0; transform: translateY(9px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+    }
+
+    /* ---------- 响应式 ---------- */
+    @media (max-width: 720px) {
+      .page {
+        margin: 0;
+        padding: 24px 18px 28px;
+        min-height: auto;
+        box-shadow: none;
+        border: none;
+      }
+      .page::before { display: none; }
+      .masthead,
+      .item-head {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+      .contacts { min-width: 0; }
+      .contacts li { justify-content: start; text-align: left; }
+      .name { font-size: 32px; }
+      .skills, .awards { grid-template-columns: 1fr; }
+      .item-date { white-space: normal; }
+    }
+
+    /* ---------- 打印：A4、省墨、保留强调 ---------- */
+    @page { size: A4; margin: 12mm; }
+
+    @media print {
+      html { background: #ffffff; }
+      /* 两页版：有空间，无需压字号，保留舒适的阅读节奏 */
+      body { font-size: 12px; line-height: 1.5; }
+      .page {
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        border: none;
+        background: #ffffff;
+      }
+      .page::before { display: none; }
+
+      .masthead { padding-bottom: 12px; }
+      .name { font-size: 32px; }
+      .lede { font-size: 11.5px; line-height: 1.6; }
+
+      .section { margin-top: 14px; }
+      .section-head { margin-bottom: 9px; }
+
+      .stream { gap: 12px; }
+      .bullets li { margin: 4px 0; }
+
+      .skill { padding-bottom: 6px; }
+      .callout { padding: 10px 13px; }
+
+      /* 分页控制：条目不被截断、标题不孤悬页底、段落不留寡行 */
+      .section-head { break-after: avoid; page-break-after: avoid; }
+      .item,
+      .skill,
+      .awards li,
+      .callout { break-inside: avoid; page-break-inside: avoid; }
+      .bullets li { break-inside: avoid; }
+      p, li { orphans: 2; widows: 2; }
+
+      /* 省墨：去除底纹，但量化结果与节点仍用深色保证扫读 */
+      .chips li, .callout { background: #ffffff; }
+      a { color: var(--ink); }
+    }
+  </style>
+</head>
+<body>
+  <main class="page" aria-label="候选人 09BIM 工程师助理简历">
+    <header class="masthead">
+      <div>
+        <p class="kicker">2026 届 · 求职简历</p>
+        <h1 class="name">候选人 09</h1>
+        <p class="target">求职意向 <b>BIM 工程师助理 / 土建施工管理岗</b></p>
+        <p class="lede">2026 届土木工程本科生，具备 Revit 建模、工程量统计和施工现场资料整理经验；能连接图纸、模型和进度计划。</p>
+      </div>
+      <ul class="contacts" aria-label="联系方式">
+        <li><span class="c-label">手机</span><span class="c-value">000-0000-0009</span></li>
+        <li><span class="c-label">邮箱</span><span class="c-value">candidate09@redacted.example</span></li>
+        <li><span class="c-label">城市</span><span class="c-value">目标城市</span></li>
+        <li><span class="c-label">作品集</span><span class="c-value">portfolio-09.redacted.example</span></li>
+        <li><span class="c-label">到岗</span><span class="c-value">2026.07 可入职</span></li>
+      </ul>
+    </header>
+
+    <section class="section" aria-labelledby="summary">
+      <div class="section-head">
+        <span class="section-index">01</span>
+        <h2 class="section-title" id="summary">个人优势</h2>
+      </div>
+      <ul class="bullets">
+        <li>使用 Revit 建立建筑、结构和机电基础模型，完成 <b class="m">12,000㎡</b> 教学楼模型校核。</li>
+        <li>根据施工图提取工程量和碰撞问题，输出清单、截图和问题闭环记录。</li>
+        <li>理解施工组织、测量放线和质量验收流程，能在现场与技术、材料和劳务团队沟通。</li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="education">
+      <div class="section-head">
+        <span class="section-index">02</span>
+        <h2 class="section-title" id="education">教育背景</h2>
+      </div>
+      <div class="stream">
+        <article class="item">
+          <div class="item-head">
+            <h3 class="item-title">示例土木工程大学 <span>土木工程 · 本科</span></h3>
+            <div class="item-date">2022.09 – 2026.06</div>
+          </div>
+          <p class="item-sub">GPA <b>3.58 / 4.00</b> ｜ 专业排名 <b>前 25%</b> ｜ 主修：结构力学、混凝土结构、工程测量、施工组织、BIM 技术应用</p>
+          <ul class="chips" aria-label="教育关键词">
+            <li>BIM 建模竞赛二等奖</li>
+            <li>施工实习</li>
+            <li>CET-4</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="experience">
+      <div class="section-head">
+        <span class="section-index">03</span>
+        <h2 class="section-title" id="experience">实习经历</h2>
+      </div>
+      <div class="stream">
+        <article class="item">
+          <div class="item-head">
+            <h3 class="item-title">示例工程建设公司 <span>土建施工实习生</span></h3>
+            <div class="item-date">2025.07 – 2025.09 ｜ 目标城市</div>
+          </div>
+          <ul class="bullets">
+        <li>跟踪住宅项目 <b class="m">2</b> 栋楼的钢筋、模板和混凝土工序，记录质量检查项 <b class="m">160+</b> 条。</li>
+        <li>核对楼层施工图和现场变更，整理技术交底、隐蔽验收和材料进场资料。</li>
+        <li>用 Revit 建立标准层模型并提取混凝土工程量，辅助预算员复核清单差异。</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="projects">
+      <div class="section-head">
+        <span class="section-index">04</span>
+        <h2 class="section-title" id="projects">项目经历</h2>
+      </div>
+      <div class="stream">
+        <article class="item">
+          <div class="item-head">
+            <h3 class="item-title">教学楼 BIM 综合建模与碰撞检查 <span>模型负责人</span></h3>
+            <div class="item-date">2025.02 – 2025.06</div>
+          </div>
+          <p class="item-sub">目标：建立可用于工程量统计和碰撞协调的综合模型。</p>
+          <ul class="bullets">
+        <li>根据建筑、结构和给排水图纸建立 <b class="m">12,000㎡</b> 教学楼模型，完成轴网、标高和构件族整理。</li>
+        <li>用 Navisworks 检查梁、管线和洞口冲突，输出 <b class="m">47</b> 条问题记录并标注责任专业。</li>
+        <li>提取混凝土、砌体和门窗工程量，与手算结果偏差控制在 <b class="m">3%</b> 内。</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <div class="item-head">
+            <h3 class="item-title">桥梁施工组织课程设计 <span>进度计划成员</span></h3>
+            <div class="item-date">2024.10 – 2024.12</div>
+          </div>
+          <ul class="bullets">
+        <li>拆分桩基、承台、墩身和梁体施工工序，编制 <b class="m">14 周</b> 进度计划。</li>
+        <li>分析关键线路和资源投入，形成 <b class="m">20 页</b> 施工组织说明书。</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="campus">
+      <div class="section-head">
+        <span class="section-index">05</span>
+        <h2 class="section-title" id="campus">校园经历</h2>
+      </div>
+      <div class="stream">
+        <article class="item">
+          <div class="item-head">
+            <h3 class="item-title">示例工程测量实践队 <span>测量组长</span></h3>
+            <div class="item-date">2023.09 – 2025.06</div>
+          </div>
+          <ul class="bullets">
+        <li>组织 <b class="m">5</b> 人小组完成水准测量、导线测量和成果校核，闭合差满足课程要求。</li>
+        <li>整理仪器使用、外业记录和误差分析模板，供后续实训使用。</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="skills">
+      <div class="section-head">
+        <span class="section-index">06</span>
+        <h2 class="section-title" id="skills">技能与工具</h2>
+      </div>
+      <dl class="skills">
+        <div class="skill">
+          <dt>BIM 工具</dt>
+          <dd>Revit、Navisworks、广联达基础、AutoCAD</dd>
+        </div>
+        <div class="skill">
+          <dt>工程能力</dt>
+          <dd>图纸识读、工程量统计、碰撞检查、施工资料</dd>
+        </div>
+        <div class="skill">
+          <dt>现场基础</dt>
+          <dd>测量放线、质量验收、技术交底、进度计划</dd>
+        </div>
+        <div class="skill">
+          <dt>办公表达</dt>
+          <dd>Excel、Project 基础、PPT、问题台账</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="section" aria-labelledby="awards">
+      <div class="section-head">
+        <span class="section-index">07</span>
+        <h2 class="section-title" id="awards">荣誉证书</h2>
+      </div>
+      <ul class="awards">
+        <li>2025 年全国高校 BIM 建模竞赛二等奖</li>
+        <li>2024 年校级三等奖学金</li>
+        <li>工程测量实训高分组</li>
+        <li>CET-4 548 分</li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="extra">
+      <div class="section-head">
+        <span class="section-index">08</span>
+        <h2 class="section-title" id="extra">补充信息</h2>
+      </div>
+      <p class="callout">求职关键词覆盖：<b class="m">BIM</b>、Revit、工程量统计、施工管理、碰撞检查、土木工程。</p>
+    </section>
+  </main>
+
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "候选人 09",
+    "email": "candidate09@redacted.example",
+    "telephone": "000-0000-0009",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "目标城市",
+        "addressCountry": "CN"
+    },
+    "jobTitle": "BIM 工程师助理",
+    "alumniOf": "示例土木工程大学",
+    "url": "portfolio-09.redacted.example",
+    "knowsAbout": [
+        "BIM",
+        "Revit",
+        "Navisworks",
+        "土木工程",
+        "工程量统计",
+        "施工管理"
+    ]
+}
+  </script>
+</body>
+</html>
