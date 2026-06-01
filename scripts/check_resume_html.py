@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# Copyright (C) 2026 resume-skill contributors
+# SPDX-License-Identifier: AGPL-3.0-or-later
 """Validate an HTML resume for HR/GEO/mobile/PDF readiness."""
 
 from __future__ import annotations
