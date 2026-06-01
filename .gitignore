@@ -1,3 +1,6 @@
 __pycache__/
 *.py[cod]
 .pytest_cache/
+
+# Internal superpowers planning docs — kept local, not published
+docs/superpowers/
