@@ -68,6 +68,52 @@ Recommended structure:
 
 - Summary, technical skills, work experience, projects, open-source or portfolio, education.
 
+## Technical Manager / 技术经理
+
+Best evidence:
+
+- Team size, reporting line, delivery scope, roadmap ownership, project portfolio, hiring, onboarding, mentoring, review, or performance feedback.
+- Engineering management tied to outcomes: delivery predictability, quality, stability, incident reduction, release cadence, developer efficiency, cross-team alignment.
+- Technical depth that supports management: architecture review, technical planning, risk control, code review standards, engineering process, observability, quality gates.
+
+Keyword variants:
+
+- 技术经理 / 技术负责人 / engineering manager / tech lead manager / 团队管理 / 项目交付 / 技术规划 / 架构评审 / 研发效能 / 质量治理
+
+Common HR concerns:
+
+- Only says "带团队" without team size, scope, or measurable delivery result.
+- Leadership claims are broad, but examples show only individual contributor work.
+- Management process is listed as meetings and coordination, without quality, efficiency, retention, or business impact.
+- Technical depth disappears after moving into management, making seniority hard to judge.
+
+Recommended structure:
+
+- Summary, leadership scope, technical strengths, management and delivery experience, selected projects, team/process improvements, education/certifications.
+
+## System Architect / 系统架构师
+
+Best evidence:
+
+- Architecture design across services, domains, data flows, integrations, cloud infrastructure, security, reliability, scalability, or migration programs.
+- Clear decision records: constraints, trade-offs, alternatives evaluated, standards created, review mechanism, rollout path, and measurable impact.
+- Cross-team technical influence: architecture governance, API contracts, platform capabilities, performance tuning, cost optimization, incident prevention, technical debt reduction.
+
+Keyword variants:
+
+- 系统架构师 / 架构设计 / distributed systems / microservices / cloud-native / high availability / scalability / DDD / API gateway / architecture governance
+
+Common HR concerns:
+
+- Architecture is described as diagrams or buzzwords without constraints, trade-offs, or adoption evidence.
+- Claims are too broad for the candidate's actual decision authority.
+- Technology choices are listed without explaining business context, system scale, reliability target, or migration risk.
+- Resume does not separate hands-on implementation, architecture review, and organization-level technical influence.
+
+Recommended structure:
+
+- Summary, architecture domains, core technical skills, architecture and platform experience, selected architecture projects, standards/governance work, education/certifications.
+
 ## Marketing Growth / 市场增长
 
 Best evidence:
